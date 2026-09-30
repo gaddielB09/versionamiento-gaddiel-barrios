@@ -92,3 +92,18 @@ function deleteProduct(event) {
 }
 
 document.getElementById('addProduct').addEventListener('click', addProduct);
+
+const themeToggle = document.getElementById('themeToggle');
+
+function applyTheme(theme) {
+    document.body.classList.toggle('dark', theme === 'dark');
+    themeToggle.textContent = theme === 'dark' ? 'Modo claro' : 'Modo oscuro';
+}
+
+applyTheme(localStorage.getItem('theme') || 'light');
+
+themeToggle.addEventListener('click', () => {
+    const theme = document.body.classList.contains('dark') ? 'light' : 'dark';
+    localStorage.setItem('theme', theme);
+    applyTheme(theme);
+});

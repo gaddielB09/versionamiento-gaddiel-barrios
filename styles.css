@@ -17,6 +17,17 @@
     --danger-hover: #C1121F;
 }
 
+body.dark {
+    --bg-start: #0B1D26;
+    --bg-end: #000000;
+    --panel: #1B2A33;
+    --label: #2EC4B6;
+    --th-bg: #12343F;
+    --td-bg: #1B2A33;
+    --td-text: #F4F1DE;
+    --border: #2C3E48;
+}
+
 body {
     background: linear-gradient(var(--bg-start), var(--bg-end));
     font-family: 'Poppins', sans-serif;
@@ -174,4 +185,20 @@ td {
     color: var(--title);
     opacity: 0.8;
     font-size: 14px;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: auto;
+    padding: 8px 14px;
+    border-radius: 20px;
+    background-color: var(--panel);
+    color: var(--label);
+}
+
+.theme-toggle:hover {
+    background-color: var(--accent);
+    color: var(--accent-text);
 }
