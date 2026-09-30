@@ -130,3 +130,48 @@ td {
 .delete-btn:hover {
     background-color: var(--danger-hover);
 }
+
+.header {
+    text-align: center;
+}
+
+.subtitle {
+    color: var(--title);
+    opacity: 0.85;
+    margin: 8px 0 0;
+    font-size: 1em;
+}
+
+.summary {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.summary-item {
+    flex: 1;
+    background-color: var(--th-bg);
+    color: var(--th-text);
+    border-radius: 8px;
+    padding: 10px 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-label {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.summary-value {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.footer {
+    margin-top: auto;
+    padding: 20px 0;
+    color: var(--title);
+    opacity: 0.8;
+    font-size: 14px;
+}

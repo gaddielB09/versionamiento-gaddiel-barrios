@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example Data Table with IndexedDB</title>
+    <title>Inventario de Productos | Gaddiel Barrios</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,36 +11,52 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Example Product List Web App</h1>
+    <header class="header">
+        <h1>Inventario de Productos</h1>
+        <p class="subtitle">Desarrollado por <strong>Gaddiel Barrios</strong></p>
+    </header>
 
     <div class="container">
 
         <div class="formContainer">
-            <label for="name">Product Name:</label>
-            <input type="text" id="name" placeholder="Enter product name">
-            
-            <label for="price">Price:</label>
-            <input type="number" id="price" placeholder="Enter product price" min="1">
-            
-            <button id="addProduct">Add Product</button>
+            <label for="name">Nombre del producto:</label>
+            <input type="text" id="name" placeholder="Ingresa el nombre">
+
+            <label for="price">Precio:</label>
+            <input type="number" id="price" placeholder="Ingresa el precio" min="1">
+
+            <button id="addProduct">Agregar producto</button>
+
+            <div class="summary">
+                <div class="summary-item">
+                    <span class="summary-label">Productos</span>
+                    <span class="summary-value" id="totalProducts">0</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Valor total</span>
+                    <span class="summary-value" id="totalValue">$0.00</span>
+                </div>
+            </div>
         </div>
 
-      
         <table id="productsTable">
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Actions</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
-          
+
             </tbody>
         </table>
     </div>
 
+    <footer class="footer">
+        <p>&copy; 2026 Gaddiel Barrios &middot; @gaddielB09</p>
+    </footer>
 
     <script src="functions.js"></script>
 </body>
